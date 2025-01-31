@@ -1,0 +1,17 @@
+{
+  "name": "@repo/api-contract",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": "./dist/index.js"
+  },
+  "dependencies": {
+    "@ts-rest/core": "^3.33.0",
+    "typescript": "latest",
+    "zod": "^3.22.4",
+    "@repo/drizzle-database": "*"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch"
+  }
+}

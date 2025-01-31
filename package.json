@@ -1,0 +1,28 @@
+{
+  "name": "turbo-repo-react-nestjs-ts-rest-expo",
+  "private": true,
+  "scripts": {
+    "build": "turbo build",
+    "dev": "turbo dev",
+    "dev:web-api": "turbo run dev --filter=client --filter=api",
+    "dev:mobile-api": "turbo run dev --filter=mobile-poop-route-v-52 --filter=api",
+    "dev:web": "turbo run dev --filter=client",
+    "dev:mobile": "turbo run dev --filter=mobile-poop-route-v-52",
+    "dev:api": "turbo run dev --filter=api",
+    "lint": "turbo lint",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+  },
+  "devDependencies": {
+    "prettier": "^3.2.5",
+    "turbo": "^2.3.3",
+    "typescript": "5.5.4"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "packageManager": "npm@10.8.1",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ]
+}

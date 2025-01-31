@@ -1,0 +1,38 @@
+{
+  "name": "@repo/drizzle-database",
+  "main": "./dist/src/index.js",
+  "types": "./dist/src/index.d.ts",
+  "exports": {
+    ".": "./dist/src/index.js"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "dev": "tsc -w",
+    "clean": "rm -rf dist",
+    "db:seed": "ts-node ./src/seed.ts",
+    "db:generate": "drizzle-kit generate",
+    "db:push": "drizzle-kit push",
+    "db:check": "drizzle-kit check"
+  },
+  "dependencies": {
+    "@neondatabase/serverless": "^0.10.4",
+    "@nestjs/common": "^10.0.0",
+    "@nestjs/config": "^3.3.0",
+    "@nestjs/core": "^10.0.0",
+    "dotenv": "^16.4.5",
+    "drizzle-orm": "^0.36.4",
+    "drizzle-zod": "^0.5.1",
+    "pg": "^8.13.1",
+    "reflect-metadata": "^0.1.13",
+    "rxjs": "^7.8.0"
+  },
+  "peerDependencies": {
+    "tslib": "^2.0.0"
+  },
+  "devDependencies": {
+    "@types/pg": "^8.11.10",
+    "drizzle-kit": "~0.28.1",
+    "tsx": "^4.19.2",
+    "typescript": "^5.0.0"
+  }
+}
